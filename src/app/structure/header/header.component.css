@@ -1,0 +1,33 @@
+:host {
+  background-image: url("/assets/img/header-baner.jpg");
+  background-position: center button;
+  min-height: 300px;
+}
+.title-bar {
+  display: flex;
+  /* flex-grow: 1; */
+  /* min-height: 120px; */
+  /* padding: 10px 0; */
+}
+
+.logo {
+  height: 120px;
+}
+.menu-bar {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding-right: 20px;
+}
+.small-icon {
+  display: flex;
+  flex-grow: 1;
+  justify-content: flex-end;
+  align-items: center;
+}
+.small-icon a {
+  border: 1px solid rgb(184, 181, 181);
+  margin: 0 10px;
+  border-radius: 15%;
+  cursor: pointer;
+}

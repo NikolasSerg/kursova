@@ -35,7 +35,7 @@ export class AppComponent {
           url: 'https://www.twitter.com/'
         }
       ],
-      showUserControls: false
+      showUserControls: true
     };
     configsService.configure(config);
     menuService.items = AppMenuItems;

@@ -1,0 +1,30 @@
+:host {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   height: 100vh;
+   width: 100vw;
+   background-image: url(/assets/img/signInLogo.jpg);
+  background-position: center center;
+  background-size: cover;
+  box-shadow: inset 80px 80px 200px #000, inset -80px -80px 200px #000;
+}
+
+.register-form {
+  min-width: 290px;
+  background-color: rgba(183, 179, 180, 0.7);
+  opacity: 0.9;
+  padding: 50px;
+  margin: 5px 10px;
+  border-radius: 10% 0;
+  box-shadow:  3px 3px 8px #000;
+}
+
+button.btn-primary {
+    float: right;
+}
+
+FIXME: поправити положення прелоадера
+span>img {
+    
+}

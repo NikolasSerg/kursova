@@ -16,6 +16,12 @@ import { MenuItemComponent } from './components/menu/menu-item/menu-item.compone
 import { HomeComponent } from './components/home/home.component';
 import { SettingsComponent } from './components/settings/settings.component';
 import { PcComponent } from './components/pc/pc.component';
+import { AuthenticatedComponent } from './components/authenticated/authenticated.component';
+import { SignInComponent } from './components/users/sign-in/sign-in.component';
+import { RegistrationComponent } from './components/users/registration/registration.component';
+import {FormsModule} from '@angular/forms';
+import { UserService } from './services/user.service';
+import { UserApi } from './components/users/users';
 
 @NgModule({
   declarations: [
@@ -29,10 +35,15 @@ import { PcComponent } from './components/pc/pc.component';
     MenuItemComponent,
     HomeComponent,
     SettingsComponent,
-    PcComponent
+    PcComponent,
+    AuthenticatedComponent,
+    SignInComponent,
+    RegistrationComponent
   ],
-  imports: [BrowserModule, AppRoutingModule],
-  providers: [ConfigsService, ScreenService, MenuService],
+  imports: [BrowserModule, AppRoutingModule, FormsModule],
+  providers: [ConfigsService, ScreenService, MenuService, UserService, {
+    provide: UserApi, useExisting: UserService
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

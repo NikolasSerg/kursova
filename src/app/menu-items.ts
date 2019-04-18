@@ -4,13 +4,13 @@ export const AppMenuItems: Array<MenuItem> = [
   {
     text: 'PC',
     icon: './assets/img/icon_CPU.png',
-    route: '/pc',
+    route: '/authenticated/pc',
     submenu: null
   },
   {
     text: 'Laptop',
     icon: './assets/img/icon_Laptop.png',
-    route: '/laptop',
+    route: '/authenticated/laptop',
     submenu: null
   }
   // ,

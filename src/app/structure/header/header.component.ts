@@ -8,7 +8,8 @@ import { MenuService } from './../../services/menu.service';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-
+  flagForIcons = true;
+  
   constructor(private screenService: ScreenService,
     private  menuService: MenuService) { }
 

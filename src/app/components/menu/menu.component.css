@@ -26,3 +26,16 @@ li {
   overflow-x: hidden;
   overflow-y: auto;
 }
+
+div {
+  margin-top: 2px;
+}
+
+div button {
+background-color: #fff;
+}
+
+button.horizontal {
+  margin-left: 20px;
+  margin-bottom: 7px;
+}

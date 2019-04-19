@@ -22,6 +22,12 @@ import { RegistrationComponent } from './components/users/registration/registrat
 import {FormsModule} from '@angular/forms';
 import { UserService } from './services/user.service';
 import { UserApi } from './components/users/users';
+import { AuthGuardService } from './services/auth-guard.service';
+import { LaptopComponent } from './components/laptop/laptop.component';
+import { DataService } from './services/data.service';
+import { PcMainComponent } from './components/pc-main/pc-main.component';
+import { PcDetailComponent } from './components/pc-detail/pc-detail.component';
+import { PcListComponent } from './components/pc-list/pc-list.component';
 
 @NgModule({
   declarations: [
@@ -38,12 +44,16 @@ import { UserApi } from './components/users/users';
     PcComponent,
     AuthenticatedComponent,
     SignInComponent,
-    RegistrationComponent
+    RegistrationComponent,
+    LaptopComponent,
+    PcMainComponent,
+    PcDetailComponent,
+    PcListComponent
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [ConfigsService, ScreenService, MenuService, UserService, {
     provide: UserApi, useExisting: UserService
-  }],
+  }, AuthGuardService, DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

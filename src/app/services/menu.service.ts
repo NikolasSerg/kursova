@@ -21,5 +21,9 @@ export class MenuService {
     this.showVerticalMenu = !this.showVerticalMenu;
   }
 
+  toggleOrientation(): void {
+    this.isVertical = !this.isVertical;
+  }
+
   constructor() { }
 }

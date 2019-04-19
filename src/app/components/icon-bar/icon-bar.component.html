@@ -1,9 +1,20 @@
-<a *ngFor="let icon of configsService.socialIcons" [href]="icon.url" [title]="icon.alt" target="_blank">
+<!-- <a *ngFor="let icon of configsService.socialIcons" [href]="icon.url" [title]="icon.alt" target="_blank">
   <img class="top-img" [src]="icon.imageFile" [alt]="icon.alt">
 </a>
 
 <div *ngIf="configsService.showUserControls">
   <span>User name</span>
-  <button *ngIf="!showLoader" class="btn btn-warning btn-sm" (click)="signOut()">Sign Out</button>
-  <img src="./assets/img/loader.gif" alt="loader" *ngIf="showLoader">
-</div>
+  <button *ngIf="!showloader" class="btn btn-warning btn-sm" (click)="signOut()">
+    Sign Out
+  </button>
+  <img src="/assets/img/loaderIn.gif" alt="loader" *ngIf="showloader"> </div> -->
+
+  <div *ngIf="showIcons">
+    <a *ngFor="let icon of configsService.socialIcons" [href]="icon.url" [title]='icon.alt' target='_blank'>
+      <img class='top-img' [src]="icon.imageFile" [alt]="icon.alt"></a>
+  </div>
+  <div [ngClass]='{"forSmall" : !showIcons}' *ngIf="configsService.showUserControls">
+    <span>User name</span>
+    <button *ngIf="!showLoader" class="btn btn-sm btn-warning" (click)='signOut()'>Sign out</button>
+    <img src="/assets/img/loaderIn.gif" *ngIf="showLoader">
+  </div>

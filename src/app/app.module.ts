@@ -19,11 +19,19 @@ import { PcComponent } from './components/pc/pc.component';
 import { AuthenticatedComponent } from './components/authenticated/authenticated.component';
 import { SignInComponent } from './components/users/sign-in/sign-in.component';
 import { RegistrationComponent } from './components/users/registration/registration.component';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { UserService } from './services/user.service';
 import { UserApi } from './components/users/users';
 import { AuthGuardService } from './services/auth-guard.service';
 import { LaptopComponent } from './components/laptop/laptop.component';
+import { DataService } from './services/data.service';
+import { PcMainComponent } from './components/pc/pc-main/pc-main.component';
+import { PcDetailComponent } from './components/pc/pc-detail/pc-detail.component';
+import { PcListComponent } from './components/pc/pc-list/pc-list.component';
+import { PopupMenuComponent } from './components/menu/popup-menu/popup-menu.component';
+import { DynamicFieldComponent } from './components/dynamicForm/dynamic-field/dynamic-field.component';
+import { DynamicFormComponent } from './components/dynamicForm/dynamic-form/dynamic-form.component';
+import { PanelComponent } from './components/panel/panel.component';
 
 @NgModule({
   declarations: [
@@ -41,12 +49,19 @@ import { LaptopComponent } from './components/laptop/laptop.component';
     AuthenticatedComponent,
     SignInComponent,
     RegistrationComponent,
-    LaptopComponent
+    LaptopComponent,
+    PcMainComponent,
+    PcDetailComponent,
+    PcListComponent,
+    PopupMenuComponent,
+    DynamicFieldComponent,
+    DynamicFormComponent,
+    PanelComponent
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
   providers: [ConfigsService, ScreenService, MenuService, UserService, {
     provide: UserApi, useExisting: UserService
-  }, AuthGuardService],
+  }, AuthGuardService, DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

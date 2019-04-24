@@ -1,5 +1,7 @@
-<app-menu *ngIf="menuService.isVertical && screenService.isLarge() ||
-menuService.showVerticalMenu && !screenService.isLarge()" class="vertical-menu">
+<app-menu 
+    *ngIf="menuService.isVertical && screenService.isLarge() ||
+menuService.showVerticalMenu && !screenService.isLarge()" 
+    class="vertical-menu">
 </app-menu>
 
 <div class="body-style">

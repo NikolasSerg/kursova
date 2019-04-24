@@ -1,0 +1,9 @@
+<div *ngIf="pc">
+<app-dynamic-form   [pcModel]='pc'
+                    [pcDefinition]='pcDefinitionInput'
+                    [operation]='operation'
+                    [errorMessage]='errorMessage'
+                    (update)='updatePc($event)'
+                    (create)='createPc($event)'>
+</app-dynamic-form>
+</div>

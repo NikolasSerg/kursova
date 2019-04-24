@@ -9,7 +9,7 @@ import { delay } from 'rxjs/operators';
 })
 export class UserService implements UserApi {
 
-  isAuthenticated = true;
+  isAuthenticated = false;
 
   constructor(private router: Router) { 
 

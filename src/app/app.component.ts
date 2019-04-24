@@ -18,7 +18,7 @@ export class AppComponent {
           alt: 'Facebook',
           url: 'https://www.facebook.com/'
         },
-
+ 
         {
           imageFile: './assets/img/socialIkons-GooglePlus.png',
           alt: 'GooglePlus',

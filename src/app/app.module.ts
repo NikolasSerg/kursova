@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,19 +16,15 @@ import { MenuComponent } from './components/menu/menu.component';
 import { MenuItemComponent } from './components/menu/menu-item/menu-item.component';
 import { HomeComponent } from './components/home/home.component';
 import { SettingsComponent } from './components/settings/settings.component';
-import { PcComponent } from './components/pc/pc.component';
 import { AuthenticatedComponent } from './components/authenticated/authenticated.component';
 import { SignInComponent } from './components/users/sign-in/sign-in.component';
 import { RegistrationComponent } from './components/users/registration/registration.component';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { UserService } from './services/user.service';
 import { UserApi } from './components/users/users';
 import { AuthGuardService } from './services/auth-guard.service';
 import { LaptopComponent } from './components/laptop/laptop.component';
-import { DataService } from './services/data.service';
-import { PcMainComponent } from './components/pc-main/pc-main.component';
-import { PcDetailComponent } from './components/pc-detail/pc-detail.component';
-import { PcListComponent } from './components/pc-list/pc-list.component';
+import { PopupMenuComponent } from './components/menu/popup-menu/popup-menu.component';
 
 @NgModule({
   declarations: [
@@ -41,19 +38,16 @@ import { PcListComponent } from './components/pc-list/pc-list.component';
     MenuItemComponent,
     HomeComponent,
     SettingsComponent,
-    PcComponent,
     AuthenticatedComponent,
     SignInComponent,
     RegistrationComponent,
     LaptopComponent,
-    PcMainComponent,
-    PcDetailComponent,
-    PcListComponent
+    PopupMenuComponent
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, NgbModule, ReactiveFormsModule],
   providers: [ConfigsService, ScreenService, MenuService, UserService, {
     provide: UserApi, useExisting: UserService
-  }, AuthGuardService, DataService],
+  }, AuthGuardService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

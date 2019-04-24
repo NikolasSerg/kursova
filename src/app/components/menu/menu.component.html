@@ -1,14 +1,18 @@
 <nav>
   <ul>
     <li *ngFor="let item of menuService.items">
-      <app-menu-item [item] = item [ngClass]="{'vartical-menu' : menuService.isVertical}">
-
+      <app-menu-item [item]='item' 
+                    [ngClass]='{"vertical-menu" : menuService.isVertical}' [parentIsPopup]='false'>
       </app-menu-item>
     </li>
   </ul>
+
 </nav>
-<div [ngClass]="menuService.isVertical ? 'dropup' : 'dropleft'">
-  <!-- FIXME: кнопку впринципі можна буде і забрати а переробити на ширину екрану -->
-<button class="btn btn-sm dropdown-toggle" *ngIf="!menuService.showVerticalMenu" [ngClass]="{'horizontal': !menuService.showVerticalMenu}"  (click)="menuService.toggleOrientation()">
-</button>
+<div [ngClass]='menuService.isVertical? "dropup": "dropleft"'>
+  <button class="btn btn-default btn-sm dropdown-toggle"
+          *ngIf="!menuService.showVerticalMenu"
+          [ngClass]='{"horizontal": !menuService.isVertical}' 
+          (click)='menuService.toggleOrientation()'>
+  </button>
+
 </div>

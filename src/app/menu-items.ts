@@ -1,60 +1,92 @@
-import {MenuItem} from './services/menu.service';
-
+import { MenuItem } from './services/menu.service';
 export const AppMenuItems: Array<MenuItem> = [
   {
-    text: 'PC',
-    icon: './assets/img/icon_CPU.png',
-    route: '/authenticated/pc',
+    text: 'Компьютери',
+    icon: '/assets/img/icon_PC.png',
+    route: "/authenticated/pc",
+    submenu:
+      [
+        {
+          text: 'ТОП 5',
+          icon: 'src/imgs/car.png',
+          route: null,
+          submenu: [
+            {
+              text: 'Assus',
+              icon: null,
+              route: null,
+              submenu: null
+            },
+            {
+              text: 'Samsung',
+              icon: null,
+              route: null,
+              submenu: null
+            },
+            {
+              text: 'Lenovo',
+              icon: null,
+              route: null,
+              submenu: null
+            },
+            {
+              text: 'Acer',
+              icon: null,
+              route: null,
+              submenu: null
+            },
+          ]
+        },
+        {
+          text: 'Price top',
+          icon: null,
+          route: null,
+          submenu: null
+        }
+      ]
+  },
+  {
+    text: 'Ноутбуки',
+    icon: '/assets/img/icon_Laptop.png',
+    route: "/authenticated/laptop",
     submenu: [
       {
-        text: 'top10',
-        icon: './assets/img/icon_CPU.png',
+        text: 'ТОП',
+        icon: null,
         route: null,
         submenu: null
       },
       {
-        text: 'games',
-        icon: './assets/img/icon_CPU.png',
-        route: null,
-        submenu: null
-      },
-      {
-        text: 'office',
-        icon: './assets/img/icon_CPU.png',
-        route: null,
-        submenu: null
-      },
-      {
-        text: '3D design',
-        icon: './assets/img/icon_CPU.png',
+        text: 'Ноутбук',
+        icon: null,
         route: null,
         submenu: null
       }
     ]
   },
   {
-    text: 'Laptop',
-    icon: './assets/img/icon_Laptop.png',
-    route: '/authenticated/laptop',
+    text: 'Підпір ПК',
+    icon: '/assets/img/settings.png',
+    route: null,
+    submenu: [
+      {
+        text: 'Стаціонарний',
+        icon: '/assets/img/icon_PC.png',
+        route: '/authenticated/pc-main',
+        submenu: null
+      },
+      {
+        text: 'Ноутбук',
+        icon: '/assets/img/icon_Laptop.png',
+        route: '/authenticated/settings/laptop',
+        submenu: null
+      }
+    ]
+  },
+  {
+    text: 'Home',
+    icon: '/assets/img/icon_Home.png',
+    route: '/authenticated/home',
     submenu: null
-  }
-  // ,
-  // {
-  //   text: 'Mobile',
-  //   icon: './assets/img/icon_Mobile.png',
-  //   route: '/mobile',
-  //   submenu: null
-  // },
-  // {
-  //   text: 'Mouse',
-  //   icon: './assets/img/icon_Mouse.png',
-  //   route: '/mouse',
-  //   submenu: null
-  // },
-  // {
-  //   text: 'Camera',
-  //   icon: './assets/img/icon_Camera.png',
-  //   route: '/camera',
-  //   submenu: null
-  // }
+  },
 ];

@@ -64,7 +64,7 @@ export class PcDetailComponent implements OnInit {
     pc.id = 0;
     this.errorMessage = null;
     this.dataService.createPc(pc).subscribe(
-      c => this.router.navigate(['/authenticated/pc-maint']),
+      c => this.router.navigate(['/authenticated/pc-main']),
       error => this.errorMessage = 'Error creating car'
     );
   }

@@ -15,7 +15,6 @@ import { MenuComponent } from './components/menu/menu.component';
 import { MenuItemComponent } from './components/menu/menu-item/menu-item.component';
 import { HomeComponent } from './components/home/home.component';
 import { SettingsComponent } from './components/settings/settings.component';
-import { PcComponent } from './components/pc/pc.component';
 import { AuthenticatedComponent } from './components/authenticated/authenticated.component';
 import { SignInComponent } from './components/users/sign-in/sign-in.component';
 import { RegistrationComponent } from './components/users/registration/registration.component';
@@ -45,7 +44,6 @@ import { PanelComponent } from './components/panel/panel.component';
     MenuItemComponent,
     HomeComponent,
     SettingsComponent,
-    PcComponent,
     AuthenticatedComponent,
     SignInComponent,
     RegistrationComponent,
